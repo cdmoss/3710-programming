@@ -6,7 +6,7 @@
         {
             "label": "build and run",
             "type": "shell",
-            "command": "make && ./as2",
+            "command": "make && ./bin/as2",
             "problemMatcher": []
         }
     ]

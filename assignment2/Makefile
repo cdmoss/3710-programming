@@ -5,10 +5,13 @@ SOURCES=as2.cc
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=as2
 
-all: $(SOURCES) $(EXECUTABLE) clean
+all: init $(SOURCES) $(EXECUTABLE) clean
+
+init:
+	mkdir -p bin
 
 $(EXECUTABLE): $(OBJECTS)
-	$(CC) $(OBJECTS) -o $@ $(LDFLAGS)
+	$(CC) $(OBJECTS) -o bin/$@ $(LDFLAGS)
 
 .cpp.o:
 	$(CC) $(CFLAGS) $< -o $@
