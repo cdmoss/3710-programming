@@ -58,31 +58,6 @@ void draw_frustum()
     glVertex3f(0.25, -.25, -0.375);
     glEnd();
     glPopMatrix();
-
-    // draw axis
-    glBegin(GL_LINES);
-    glColor3f(1.0, 0.0, 0.0); // red for x
-    glVertex3f(-5.0, 0.0, 0.0);
-    glVertex3f(5.0, 0.0, 0.0);
-    glEnd();    
-    
-    glBegin(GL_LINES);
-    glColor3f(0.0, 1.0, 0.0); // green for y
-    glVertex3f(0.0, -5.0, 0.0);
-    glVertex3f(0.0, 5.0, 0.0);
-    glEnd();
-    
-    glBegin(GL_LINES);
-    glColor3f(0.0, 0.0, 1.0); // blue for z
-    glVertex3f(0.0, 0.0, -5.0);
-    glVertex3f(0.0, 0.0, 5.0);
-    glEnd();
-    
-    glBegin(GL_POINT);
-    glColor3f(1.0, 1.0, 1.0); // white for x
-    glVertex3f(0.0, 0.0, 0.0);
-    glEnd();
-
 }
 
 void init() {
